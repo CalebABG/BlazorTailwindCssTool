@@ -1,0 +1,22 @@
+### Dev
+# Note: Run these commands in the root of your Blazor project folder
+# 
+# Building:
+#   - docker build --no-cache -f Dockerfile.cssbuild -t testapp/tailwindcssbuild .
+# 
+# Running:
+#   - docker run -it --rm --name test-twcbuild -e NODE_ENV=development -v ${PWD}:/app testapp/tailwindcssbuild
+# 
+# Removing:
+#   - docker image rm testapp/tailwindcssbuild
+
+FROM node:14.15.1-alpine3.12
+
+# development | production
+ENV NODE_ENV=development
+
+RUN npm i tailwindcss-cli@latest -g
+
+WORKDIR /app
+
+CMD [ "/bin/sh", "./cssbuild.sh" ]
