@@ -16,7 +16,7 @@
 This tool uses ```Docker``` as a, no pun intended, *container* for bundling up a ```Node JS``` environment which has installed TailWind CSS's Npx Cli tool to build your css file!
 
 To make use of this tool, for now, you'll need to drop the ```Dockerfile.cssbuild``` and ```cssbuild.sh``` files into the root directory of your Blazor project
-   - Don't worry, neither of these files are **NOT** harmful and **DON'T** gather any data about your project.
+   - Don't worry, these files are **NOT** harmful and **DON'T** gather any data about your project.
    - Both files make use of the Blazor project so it can find the TailWind CSS's config file, as well as the master css file for the project.
 
 The ```Styles``` folder is purely a structural housing for the master css file as well as the config file. If you'd like or if your project has different locations where the config file (if you have one, as it's optional), as well as the css file, you can change the path to them in the ```cssbuild.sh``` file.
